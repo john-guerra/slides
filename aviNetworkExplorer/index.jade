@@ -39,17 +39,6 @@ html
             a(href='http://infovis.co/slides/aviNetworkExplorer', target='_blank') http://infovis.co/slides/aviNetworkExplorer
           p.small
             a(href='http://twitter.com/duto_guerra') @duto_guerra
-          //- p.small
-          //-   a(href='http://www.cientificosdedatos.com', target='_blank') http://www.cientificosdedatos.com
-
-        //- section
-        //-   h2 This paper in a nutshell
-        //-   ol
-        //-     li.fragment The problem: show photos with stats
-        //-     li.fragment Experiment 1: how many photos should we fit?
-        //-     li.fragment Experiment 2: what layout should we use?
-        //-     li.fragment Experiment 3: should we add labels?
-        //-     li.fragment Conclusions
 
 
         section
@@ -85,7 +74,7 @@ html
 
         section
           section
-            h2 Network Explorer
+            h1 Best practices
 
 
           section
@@ -93,16 +82,16 @@ html
             ul
               li.fragment Get an #[strong overview] of the network
               li.fragment Explore nodes of interest's #[strong ego-networks] on demand
-            p.small
+            p.small.fragment
               strong Best practice #1: offer overviews and ego-network modes
 
           section
-            h1 Overview
+            h1 Overview mode
 
           section
             h2 Too much information
             img.demo(src="images/ssdemo-fwd-15000-before.png")
-            a.tiny(src="http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png") http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png
+            a.tiny(href="http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png") http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png
 
           section
             h2 Rank-by-relevance framework
@@ -130,7 +119,8 @@ html
             h2 Force-in-a-box
             iframe.blocks(src="https://cdn.rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/4ab64e42bd88f3b6ec3b742d1fefb67cb61140a9/index.html")
             a.small(src="https://github.com/john-guerra/forceInABox") https://github.com/john-guerra/forceInABox
-            strong Best practice #4 Cluster and separate groups
+            p.small
+              strong Best practice #4 Cluster and separate groups
 
           section
             h2 Jump into clusters
@@ -157,18 +147,14 @@ html
           section
             h2 Ego-distance mode
             img.demo(src="images/ego_distance_view_annotated_filtered.png")
-            strong Best practice #5 Allow node expansion on demand
+            p.small
+              strong Best practice #5 Allow node expansion on demand
 
           section
             h2 Node pining
             img.demo(src="images/network_explorer_ego_distance.png")
-            p
+            p.small
               strong Best practice #5 Allow custom layouts
-
-
-
-
-
 
 
         section

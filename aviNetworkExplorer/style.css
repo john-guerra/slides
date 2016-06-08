@@ -93,6 +93,9 @@
 .reveal .small {
   font-size: 80%;
 }
+.reveal .tiny {
+  font-size: 60%;
+}
 .reveal .authors {
   font-size: 70%;
 }
