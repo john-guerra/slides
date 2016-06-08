@@ -1,0 +1,299 @@
+doctype html
+html
+  head
+    title Identifying Best Practices for Visualizing Photo Statistics and Galleries using Treemaps
+    meta(charset='utf-8')
+    meta(name='author', content='John Alexis Guerra Gomez')
+    meta(name='description', content='Identifying Best Practices for Visualizing Photo Statistics and Galleries using Treemaps')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+    //- link(href='lib/css/reveal.css', rel='stylesheet')
+    //- link(href='lib/css/theme/simple.css', rel='stylesheet')
+    //- link(href='lib/css/zenburn.css', rel='stylesheet')
+    link(href='style.css', rel='stylesheet')
+    //- Printing and PDF exports -->
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'lib/css/print/pdf.css' : 'lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    script(src='lib/js/d3.min.js')
+    script(src='lib/js/bumpChartPhotos.js')
+  body
+    .reveal
+      .slides
+        section#title
+          h3: strong Identifying Best Practices for Visualizing Photo Statistics and Galleries using Treemaps
+          br
+
+
+          p.authors.
+            #[a(href='http://johnguerra.co/', target='_blank') John A. Guerra Gómez]#[sup &dagger;], Cati Boulanger#[sup &dagger;], Sanjay Kairam#[sup &Dagger;], David A. Shamma#[sup &dagger;]
+            #[br]
+            span Yahoo Labs#[sup &dagger;] and Stanford University#[sup &dagger;]
+
+          //- p.small Use
+          //-   strong  spacebar
+          //-   |  and the arrows to advance slides
+          br
+          p.small
+            a(href='http://infovis.co/slides/aviPhototreemap', target='_blank') http://infovis.co/slides/aviPhototreemap
+          p.small
+            a(href='http://twitter.com/duto_guerra') @duto_guerra
+          //- p.small
+          //-   a(href='http://www.cientificosdedatos.com', target='_blank') http://www.cientificosdedatos.com
+
+        //- section
+        //-   h2 This paper in a nutshell
+        //-   ol
+        //-     li.fragment The problem: show photos with stats
+        //-     li.fragment Experiment 1: how many photos should we fit?
+        //-     li.fragment Experiment 2: what layout should we use?
+        //-     li.fragment Experiment 3: should we add labels?
+        //-     li.fragment Conclusions
+
+
+        //- ------------------------WHOAMI----------------------
+
+        section#problem
+          section
+            h1 The problem
+
+          section
+            h2 How to display groups of photos?
+
+          section(data-background="images/Flickr_Explore.png")
+            //- img(src="images/Flickr_Explore.png")
+            //- h2 Photo galleries
+
+
+          //- section
+          //-   h2 Flickr examples
+
+          //- section
+          //-   h2 Photomesa?
+
+          //- section
+          //-   h2 Picasa / Justified view
+
+          section
+            h3 What if the photos have also statistics?
+
+          section(data-background="images/Flickr_photo_stats.png")
+
+          section
+            img(src="images/Flickr_photo_stats_list.png")
+
+          section(data-background="images/widgetExample.png")
+
+          section#researchQuestion
+            h3: strong What are the best practices for representing photos with associated statistics with treemaps?
+
+
+        section
+          section
+            h1 Experiment 1:
+            h2 Photo count
+
+          section#ex1Demo
+            h2.demo Ex1. Demo
+            img.demo(src="images/screenshot_experiment1.png")
+
+          section
+            h2 We measured
+            ol
+              li.fragment Time to find photo
+              li.fragment User preference
+
+          section
+            h2.demo Ex1. Demographics
+            img.demo(src="images/experiment1_demographics.png")
+            p.small 154 Mechanical Turk Responses (67 women)
+
+          section
+            h2 Ex1. Results
+
+          section
+            h3.demo Avg time to find depending on photo position
+            img.demo(src="images/experiment1_resultsv2.png")
+
+          section
+            h3.demo Photo count sweet spot
+            img.demo(src="images/experiment1_sweet_spot.png")
+            p.small For a 390x440px phototreemap
+
+
+        section#Experiment2
+          section
+            h1 Experiment 2:
+            h2 Layout
+
+          section
+            h2.demo Demo
+            img.demo(src="images/experiment2_treemap1.png")
+
+          section
+            h2 We measured
+            ol
+              li.fragment Time to find photos
+              li.fragment Number of errors
+              li.fragment Accuracy
+              li.fragment User preference
+
+          section
+            h2.demo Ex2. Demographics
+            img.demo(src="images/experiment2_demographics.png")
+            p.small 63 responses (27 women)
+
+
+          section
+            h3.demo Time to find photo (ms)
+            img.demo(src="images/experiment2_results.png")
+
+          section
+            h2 Errors
+            table
+              tr
+                td Proportional
+                td 47
+              tr
+                td Scrollable
+                td 21
+
+          section
+            h2 Accuracy
+            table
+              tr
+                td Proportional
+                td 86.44%
+              tr
+                td Scrollable
+                td 77.97%
+
+          section
+            h2 User preference
+            p 81.3% of the participants preferred the scrollable layout
+
+        section#Experiment3
+          section
+            h1 Experiment 3:
+            h2 User Study
+
+          section
+            h2 Design
+            ul
+              li.fragment 7 participants
+              li.fragment Users viewed their own photos
+              li.fragment 5 point likert scale on usefulness and pleasingness for 3x2 configurations
+              ul
+                li.fragment Labels vs no Labels
+                li.fragment Size and sorting by views, comments or favorites
+
+          section
+            h3.demo Configuration preference
+            img.demo(src="images/experiment3_results.png")
+
+
+        section#Conclusions
+          section
+            h2 Conclusions
+            ul
+              li.fragment Small number of photos is better #[span.fragment but not too small]
+              li.fragment Cropping and aspect ration has a big impact
+              li.fragment Scrolling can be preferable to cropping
+              li.fragment Labels are important
+
+          section
+            h2 Future/Current Work
+            ul
+              li.fragment Explore cropping compensation techniques
+              li.fragment Usage of treemap deeper levels for categorization
+              li.fragment Zoomable techniques
+
+
+
+
+
+
+
+
+          //- section
+          //-   img.demo(src="images/network_explorer_before.png")
+
+
+          //- section
+          //-   h2 Clustering
+          //-   //- img(src="images/.jpg")
+          //-   iframe.blocks(src="https://cdn.rawgit.com/john-guerra/ecdde32ab4ad91a1a240/raw/2c1a843df8631604a99140ddc9db8ee048624a79/index.html")
+
+          //- section
+          //-   h2 Force in a box
+          //-   iframe.blocks(src="https://cdn.rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/320474d468321d00f3241609a125c8d37935474b/index.html")
+
+          //- section
+          //-   h2 Overview
+          //-   img.demo(src="images/overview_10k_nointer_cropped.png")
+
+          //- section
+          //-   h2 Ego distance
+          //-   img.demo(src="images/network_explorer_ego_distance.png")
+
+
+        section#end
+          h1 Thank You
+          h2 Questions?
+          div.contactInfo
+            p John Alexis Guerra Gómez
+            a(href="http://johnguerra.co") johnguerra.co
+            br
+            a(href="http://twitter.com/duto_guerra") @duto_guerra
+
+
+
+    script(src='lib/js/head.min.js')
+    script(src='lib/js/reveal.js')
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+          // Interpret Markdown in <section> elements
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+          // Syntax highlight for <code> elements
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Zoom in and out with Alt+click
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+
+          // Speaker notes
+          { src: 'plugin/notes/notes.js', async: true },
+
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: 'plugin/remotes/remotes.js', async: true },
+
+          //- // MathJax
+          //- { src: 'plugin/math/math.js', async: true }
+        ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-50178794-5', 'auto');
+      ga('send', 'pageview');
+
+

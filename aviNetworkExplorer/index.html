@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Network Explorer: Design, Implementation, and Real World Deployment of a Large Network Visualization Tool</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Identifying Best Practices for Visualizing Photo Statistics and Galleries using Treemaps">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'lib/css/print/pdf.css' : 'lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="lib/js/d3.min.js"></script>
+    <script src="lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="title">
+          <h3><strong>Network Explorer: Design, Implementation, and Real World Deployment of a Large Network Visualization Tool</strong></h3><br>
+          <p class="authors"><a href="http://johnguerra.co/" target="_blank">John A. Guerra Gómez</a>, Aaron Wilson, Juan Liu, Dan Davies, Peter Jarvis and Eric Bier
+            <br>
+            <span></span> Palo Alto Research Center
+            
+          </p><br>
+          <p class="small"><a href="http://infovis.co/slides/aviNetworkExplorer" target="_blank">http://infovis.co/slides/aviNetworkExplorer</a></p>
+          <p class="small"><a href="http://twitter.com/duto_guerra">@duto_guerra</a></p>
+        </section>
+        
+        <section>
+          <section>
+            <h1>Large networks visualization</h1>
+          </section>
+          <section>
+            <h3>Plenty of work has been done on the field</h3>
+          </section>
+          <section>
+            <h2>Our objectives</h2>
+            <ul>
+              <li class="fragment">Apply state of the art of netViz</li>
+              <li class="fragment">Report what worked (and didn't) in our industry setting</li>
+              <li class="fragment">We open sourced some of our components for the community to reuse</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Some netviz tools</h2>
+            <ul>
+              <li>NetworkX</li>
+              <li>Gephi</li>
+              <li>Cytoscape</li>
+              <li>Pajek</li>
+              <li>Many others</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why develop another tool?</h2>
+            <ul>
+              <li class="fragment">Web-based</li>
+              <li class="fragment">Scalability</li>
+              <li class="fragment">Integration</li>
+              <li class="fragment">Industry</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Network Explorer</h2>
+          </section>
+          <section>
+            <h2>Customer's needs</h2>
+            <ul>
+              <li class="fragment">Get an <strong>overview</strong> of the network</li>
+              <li class="fragment">Explore nodes of interest's <strong>ego-networks</strong> on demand</li>
+            </ul>
+            <p class="small"><strong>Best practice #1: offer overviews and ego-network modes</strong></p>
+          </section>
+          <section>
+            <h1>Overview</h1>
+          </section>
+          <section>
+            <h2>Too much information</h2><img src="images/ssdemo-fwd-15000-before.png" class="demo"><a src="http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png" class="tiny">http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png</a>
+          </section>
+          <section>
+            <h2>Rank-by-relevance framework</h2><img src="images/rank_by_relevance1.png" class="demo">
+            <p class="small"><strong>Best practice #2 filter and display the most important nodes</strong></p>
+          </section>
+          <section>
+            <h2>Rank-by-relevance framework 2</h2><img src="images/rank_by_relevance2.png" class="demo">
+            <p class="small"><strong>Best practice #3 include neighborhoods in the selection</strong></p>
+          </section>
+          <section><img src="images/network_explorer_before.png" class="demo"></section>
+          <section>
+            <h2>NetClustering.js</h2>
+            <iframe src="https://cdn.rawgit.com/john-guerra/ecdde32ab4ad91a1a240/raw/2c1a843df8631604a99140ddc9db8ee048624a79/index.html" class="blocks"></iframe><a src="https://github.com/john-guerra/netClusteringJs" class="small">https://github.com/john-guerra/netClusteringJs</a>
+          </section>
+          <section>
+            <h2>Force-in-a-box</h2>
+            <iframe src="https://cdn.rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/4ab64e42bd88f3b6ec3b742d1fefb67cb61140a9/index.html" class="blocks"></iframe><a src="https://github.com/john-guerra/forceInABox" class="small">https://github.com/john-guerra/forceInABox</a><strong>Best practice #4 Cluster and separate groups</strong>
+          </section>
+          <section>
+            <h2>Jump into clusters</h2><img src="images/jumpIntoCluster_1.png">
+          </section>
+          <section>
+            <h2>Jump into clusters</h2><img src="images/jumpIntoCluster_2.png">
+          </section>
+          <section>
+            <h2>Jump into clusters</h2><img src="images/jumpIntoCluster_3.png">
+          </section>
+          <section>
+            <h2>Jump into clusters</h2><img src="images/jumpIntoCluster_4.png">
+          </section>
+          <section>
+            <h2>Overview</h2><img src="images/overview_10k_nointer_cropped.png" class="demo">
+          </section>
+          <section>
+            <h1>Ego-network view</h1>
+          </section>
+          <section>
+            <h2>Ego-distance mode</h2><img src="images/ego_distance_view_annotated_filtered.png" class="demo"><strong>Best practice #5 Allow node expansion on demand</strong>
+          </section>
+          <section>
+            <h2>Node pining</h2><img src="images/network_explorer_ego_distance.png" class="demo">
+            <p><strong>Best practice #5 Allow custom layouts</strong></p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Validation</h2>
+          </section>
+          <section>
+            <h2>Fraud, waste and abuse</h2>
+          </section>
+          <section>
+            <h2>Police chat networks</h2>
+          </section>
+          <section>
+            <h2>Drug latent communities</h2>
+          </section>
+          <section>
+            <h1>Contributions</h1>
+            <ul>
+              <li class="fragment">Design and real world implementation of Network Explorer</li>
+              <li class="fragment">Node Navigator</li>
+              <li class="fragment">Open Sourced force-in-a-box layout</li>
+              <li class="fragment">Open Sourced in-browser clustering</li>
+              <li class="fragment">Rank-by-feature</li>
+            </ul>
+          </section>
+        </section>
+        <section id="end">
+          <h1>Thank You</h1>
+          <h2>Questions?</h2>
+          <div class="contactInfo">
+            <p>John Alexis Guerra Gómez</p><a href="http://johnguerra.co">johnguerra.co</a><br><a href="http://twitter.com/duto_guerra">@duto_guerra</a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: 'plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: 'plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: 'plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-50178794-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

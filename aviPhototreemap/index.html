@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Identifying Best Practices for Visualizing Photo Statistics and Galleries using Treemaps</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Identifying Best Practices for Visualizing Photo Statistics and Galleries using Treemaps">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'lib/css/print/pdf.css' : 'lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="lib/js/d3.min.js"></script>
+    <script src="lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="title">
+          <h3><strong>Identifying Best Practices for Visualizing Photo Statistics and Galleries using Treemaps</strong></h3><br>
+          <p class="authors"><a href="http://johnguerra.co/" target="_blank">John A. Guerra Gómez</a><sup>&dagger;</sup>, Cati Boulanger<sup>&dagger;</sup>, Sanjay Kairam<sup>&Dagger;</sup>, David A. Shamma<sup>&dagger;</sup>
+            <br>
+            span Yahoo Labs<sup>&dagger;</sup> and Stanford University<sup>&dagger;</sup>
+            
+          </p><br>
+          <p class="small"><a href="http://infovis.co/slides/aviPhototreemap" target="_blank">http://infovis.co/slides/aviPhototreemap</a></p>
+          <p class="small"><a href="http://twitter.com/duto_guerra">@duto_guerra</a></p>
+        </section>
+        
+        <section id="problem">
+          <section>
+            <h1>The problem</h1>
+          </section>
+          <section>
+            <h2>How to display groups of photos?</h2>
+          </section>
+          <section data-background="images/Flickr_Explore.png">
+            
+          </section>
+          <section>
+            <h3>What if the photos have also statistics?</h3>
+          </section>
+          <section data-background="images/Flickr_photo_stats.png"></section>
+          <section><img src="images/Flickr_photo_stats_list.png"></section>
+          <section data-background="images/widgetExample.png"></section>
+          <section id="researchQuestion">
+            <h3><strong>What are the best practices for representing photos with associated statistics with treemaps?</strong></h3>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Experiment 1:</h1>
+            <h2>Photo count</h2>
+          </section>
+          <section id="ex1Demo">
+            <h2 class="demo">Ex1. Demo</h2><img src="images/screenshot_experiment1.png" class="demo">
+          </section>
+          <section>
+            <h2>We measured</h2>
+            <ol>
+              <li class="fragment">Time to find photo</li>
+              <li class="fragment">User preference</li>
+            </ol>
+          </section>
+          <section>
+            <h2 class="demo">Ex1. Demographics</h2><img src="images/experiment1_demographics.png" class="demo">
+            <p class="small">154 Mechanical Turk Responses (67 women)</p>
+          </section>
+          <section>
+            <h2>Ex1. Results</h2>
+          </section>
+          <section>
+            <h3 class="demo">Avg time to find depending on photo position</h3><img src="images/experiment1_resultsv2.png" class="demo">
+          </section>
+          <section>
+            <h3 class="demo">Photo count sweet spot</h3><img src="images/experiment1_sweet_spot.png" class="demo">
+            <p class="small">For a 390x440px phototreemap</p>
+          </section>
+        </section>
+        <section id="Experiment2">
+          <section>
+            <h1>Experiment 2:</h1>
+            <h2>Layout</h2>
+          </section>
+          <section>
+            <h2 class="demo">Demo</h2><img src="images/experiment2_treemap1.png" class="demo">
+          </section>
+          <section>
+            <h2>We measured</h2>
+            <ol>
+              <li class="fragment">Time to find photos</li>
+              <li class="fragment">Number of errors</li>
+              <li class="fragment">Accuracy</li>
+              <li class="fragment">User preference</li>
+            </ol>
+          </section>
+          <section>
+            <h2 class="demo">Ex2. Demographics</h2><img src="images/experiment2_demographics.png" class="demo">
+            <p class="small">63 responses (27 women)</p>
+          </section>
+          <section>
+            <h3 class="demo">Time to find photo (ms)</h3><img src="images/experiment2_results.png" class="demo">
+          </section>
+          <section>
+            <h2>Errors</h2>
+            <table>
+              <tr>
+                <td>Proportional</td>
+                <td>47</td>
+              </tr>
+              <tr>
+                <td>Scrollable</td>
+                <td>21</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h2>Accuracy</h2>
+            <table>
+              <tr>
+                <td>Proportional</td>
+                <td>86.44%</td>
+              </tr>
+              <tr>
+                <td>Scrollable</td>
+                <td>77.97%</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h2>User preference</h2>
+            <p>81.3% of the participants preferred the scrollable layout</p>
+          </section>
+        </section>
+        <section id="Experiment3">
+          <section>
+            <h1>Experiment 3:</h1>
+            <h2>User Study</h2>
+          </section>
+          <section>
+            <h2>Design</h2>
+            <ul>
+              <li class="fragment">7 participants</li>
+              <li class="fragment">Users viewed their own photos</li>
+              <li class="fragment">5 point likert scale on usefulness and pleasingness for 3x2 configurations</li>
+              <ul>
+                <li class="fragment">Labels vs no Labels</li>
+                <li class="fragment">Size and sorting by views, comments or favorites</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3 class="demo">Configuration preference</h3><img src="images/experiment3_results.png" class="demo">
+          </section>
+        </section>
+        <section id="Conclusions">
+          <section>
+            <h2>Conclusions</h2>
+            <ul>
+              <li class="fragment">Small number of photos is better <span class="fragment">but not too small</span></li>
+              <li class="fragment">Cropping and aspect ration has a big impact</li>
+              <li class="fragment">Scrolling can be preferable to cropping</li>
+              <li class="fragment">Labels are important</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Future/Current Work</h2>
+            <ul>
+              <li class="fragment">Explore cropping compensation techniques</li>
+              <li class="fragment">Usage of treemap deeper levels for categorization</li>
+              <li class="fragment">Zoomable techniques</li>
+            </ul>
+          </section>
+          
+          
+        </section>
+        <section id="end">
+          <h1>Thank You</h1>
+          <h2>Questions?</h2>
+          <div class="contactInfo">
+            <p>John Alexis Guerra Gómez</p><a href="http://johnguerra.co">johnguerra.co</a><br><a href="http://twitter.com/duto_guerra">@duto_guerra</a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: 'plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: 'plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: 'plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-50178794-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
