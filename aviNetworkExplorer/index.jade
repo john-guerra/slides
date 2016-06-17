@@ -43,10 +43,10 @@ html
 
         section
           section
-            h1 Large networks visualization
+            h2 Large networks visualization
 
           section
-            h3 Plenty of work has been done on the field
+            h2 Plenty of work has been done on the field
 
           section
             h2 Our objectives
@@ -62,14 +62,15 @@ html
               li Gephi
               li Cytoscape
               li Pajek
+              li NetworkX
               li Many others
 
           section
             h2 Why develop another tool?
             ul
+              li.fragment Integration
               li.fragment Web-based
               li.fragment Scalability
-              li.fragment Integration
               li.fragment Industry
 
         section
@@ -94,14 +95,14 @@ html
             a.tiny(href="http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png") http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png
 
           section
-            h2 Rank-by-relevance framework
+            h2.demo Rank-by-relevance framework
             img.demo(src="images/rank_by_relevance1.png")
             p.small
               strong Best practice #2 filter and display the most important nodes
 
 
           section
-            h2 Rank-by-relevance framework 2
+            h2.demo Rank-by-relevance framework 2
             img.demo(src="images/rank_by_relevance2.png")
             p.small
               strong Best practice #3 include neighborhoods in the selection
@@ -110,51 +111,65 @@ html
             img.demo(src="images/network_explorer_before.png")
 
           section
-            h2 NetClustering.js
+            h2.demo NetClustering.js
             //- img(src="images/.jpg")
             iframe.blocks(src="https://cdn.rawgit.com/john-guerra/ecdde32ab4ad91a1a240/raw/2c1a843df8631604a99140ddc9db8ee048624a79/index.html")
-            a.small(src="https://github.com/john-guerra/netClusteringJs") https://github.com/john-guerra/netClusteringJs
+            a.tiny(href="https://github.com/john-guerra/netClusteringJs") https://github.com/john-guerra/netClusteringJs
 
           section
-            h2 Force-in-a-box
+            h2.demo Force-in-a-box
             iframe.blocks(src="https://cdn.rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/4ab64e42bd88f3b6ec3b742d1fefb67cb61140a9/index.html")
-            a.small(src="https://github.com/john-guerra/forceInABox") https://github.com/john-guerra/forceInABox
             p.small
               strong Best practice #4 Cluster and separate groups
 
-          section
-            h2 Jump into clusters
-            img(src="images/jumpIntoCluster_1.png")
+            a.tiny(href="https://github.com/john-guerra/forceInABox") https://github.com/john-guerra/forceInABox
 
           section
-            h2 Jump into clusters
-            img(src="images/jumpIntoCluster_2.png")
-          section
-            h2 Jump into clusters
-            img(src="images/jumpIntoCluster_3.png")
-          section
-            h2 Jump into clusters
-            img(src="images/jumpIntoCluster_4.png")
-
+            img.bigdemo(src="images/overview_10k_full_cropped.png")
 
           section
-            h2 Overview
+            img.bigdemo(src="images/overview_10k_nointer_cropped.png")
+
+          section
+            h2.demo Jump into clusters
+            img.demo(src="images/jumpIntoCluster_1.png")
+
+          section
+            h2.demo Jump into clusters
+            img.demo(src="images/jumpIntoCluster_2.png")
+          section
+            h2.demo Jump into clusters
+            img.demo(src="images/jumpIntoCluster_3.png")
+          section
+            h2.demo Jump into clusters
+            img.demo(src="images/jumpIntoCluster_4.png")
+            p.small
+              strong Best practice #5 Allow users to filter by cluster
+
+          section
+            h2.demo Node navigator
+            img.demo(src="images/nodeNavigator.png")
+            p.small
+              strong Best practice #6 Inform users of what they are seeing
+
+          section
+            h2.demo Overview
             img.demo(src="images/overview_10k_nointer_cropped.png")
 
           section
             h1 Ego-network view
 
           section
-            h2 Ego-distance mode
+            h2.demo Ego-distance mode
             img.demo(src="images/ego_distance_view_annotated_filtered.png")
             p.small
-              strong Best practice #5 Allow node expansion on demand
+              strong Best practice #7 Allow node expansion on demand
 
           section
-            h2 Node pining
+            h2.demo Node pining
             img.demo(src="images/network_explorer_ego_distance.png")
             p.small
-              strong Best practice #5 Allow custom layouts
+              strong Best practice #8 Allow custom layouts
 
 
         section
@@ -162,32 +177,42 @@ html
             h2 Validation
 
           section
-            h2 Fraud, waste and abuse
+            h2.demo Fraud, waste and abuse
+            img.demo(src="images/fraud_waste_and_abuse.png")
 
           section
-            h2 Police chat networks
+            h2.demo Police chat networks
+            img.demo(src="images/fiveO_chat_anon.png")
 
           section
-            h2 Drug latent communities
+            h2.demo Drug latent communities
+            img.demo(src="images/clusters_latent_communities2.png")
 
+        section
           section
-            h1 Contributions
+            h2 Contributions
             ul
-              li.fragment Design and real world implementation of Network Explorer
+              li.fragment Best practices
               li.fragment Node Navigator
               li.fragment Open Sourced force-in-a-box layout
               li.fragment Open Sourced in-browser clustering
-              li.fragment Rank-by-feature
+              li.fragment Rank-by-relevance framework
 
 
-        section#end
+        section#thankyou(data-background="#000" data-background-video="images/NetworkExplorer_AVI_Demo_highres.mp4,images/NetworkExplorer_AVI_Demo_highres.webm")
           h1 Thank You
           h2 Questions?
+          //- video
+          //-   source(data-src="images/NetworkExplorer_AVI_Demo_highres.webm" type="video/webm")
+          //-   source(data-src="images/NetworkExplorer_AVI_Demo_highres.mp4" type="video/mp4")
+          test
           div.contactInfo
             p John Alexis Guerra Gómez
             a(href="http://johnguerra.co") johnguerra.co
             br
             a(href="http://twitter.com/duto_guerra") @duto_guerra
+
+
 
 
 

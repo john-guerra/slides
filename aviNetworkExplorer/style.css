@@ -61,7 +61,7 @@
 }
 .reveal iframe.blocks {
   width: 960px;
-  height: 650px;
+  height: 500px;
   margin-left: -30px;
 }
 .reveal section img {
@@ -83,6 +83,10 @@
 }
 .reveal img.demo {
   max-height: 500px;
+}
+.reveal img.bigdemo {
+  margin-top: -0.5em;
+  max-height: 700px;
 }
 .reveal #comparisonTable {
   font-size: 0.5em;
@@ -153,6 +157,12 @@
 }
 .reveal .contactInfo a {
   font-size: 0.6em;
+}
+.reveal #thankyou h1,
+.reveal #thankyou h2,
+.reveal #thankyou p,
+.reveal #thankyou a {
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 .reveal #munznerpreferencechart {
   color: #fff;
