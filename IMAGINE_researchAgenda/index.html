@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quest for insights: visualizing trees, graphs and photos.</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Quest for insights: visualizing trees, graphs and photos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'lib/css/print/pdf.css' : 'lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="lib/js/d3.min.js"></script>
+    <script src="lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="title">
+          <h3><strong>Quest for insights: visualizing trees, graphs and photos</strong></h3><br>
+          <p class="authors"><a href="http://johnguerra.co/" target="_blank">John A. Guerra Gómez</a>, Aaron Wilson, Juan Liu, Dan Davies, Peter Jarvis and Eric Bier
+            <br>
+            <span></span> Palo Alto Research Center
+            
+          </p><br>
+          <p class="small"><a href="http://johnguerra.co/slides/IMAGINE_researchAgenda" target="_blank">http://johnguerra.co/slides/IMAGINE_researchAgenda</a></p>
+          <p class="small"><a href="http://twitter.com/duto_guerra">@duto_guerra</a></p>
+        </section>
+        <section>
+          <section>
+            <h2>Large networks visualization</h2>
+          </section>
+          <section>
+            <h2>Plenty of work has been done on the field</h2>
+          </section>
+          <section>
+            <h2>Our objectives</h2>
+            <ul>
+              <li class="fragment">Apply state of the art of netViz</li>
+              <li class="fragment">Report what worked (and didn't) in our industry setting</li>
+              <li class="fragment">We open sourced some of our components for the community to reuse</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Some netviz tools</h2>
+            <ul>
+              <li>NetworkX</li>
+              <li>Gephi</li>
+              <li>Cytoscape</li>
+              <li>Pajek</li>
+              <li>NetworkX</li>
+              <li>Many others</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why develop another tool?</h2>
+            <ul>
+              <li class="fragment">Integration</li>
+              <li class="fragment">Web-based</li>
+              <li class="fragment">Scalability</li>
+              <li class="fragment">Industry</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Best practices</h1>
+          </section>
+          <section>
+            <h2>Customer's needs</h2>
+            <ul>
+              <li class="fragment">Get an <strong>overview</strong> of the network</li>
+              <li class="fragment">Explore nodes of interest's <strong>ego-networks</strong> on demand</li>
+            </ul>
+            <p class="small fragment"><strong>Best practice #1: offer overviews and ego-network modes</strong></p>
+          </section>
+          <section>
+            <h1>Overview mode</h1>
+          </section>
+          <section>
+            <h2>Too much information</h2><img src="images/ssdemo-fwd-15000-before.png" class="demo"><a href="http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png" class="tiny">http://blog.opencog.org/files/2008/10/ssdemo-fwd-15000-before.png</a>
+          </section>
+          <section>
+            <h2 class="demo">Rank-by-relevance framework</h2><img src="images/rank_by_relevance1.png" class="demo">
+            <p class="small"><strong>Best practice #2 filter and display the most important nodes</strong></p>
+          </section>
+          <section>
+            <h2 class="demo">Rank-by-relevance framework 2</h2><img src="images/rank_by_relevance2.png" class="demo">
+            <p class="small"><strong>Best practice #3 include neighborhoods in the selection</strong></p>
+          </section>
+          <section><img src="images/network_explorer_before.png" class="demo"></section>
+          <section>
+            <h2 class="demo">NetClustering.js</h2>
+            <iframe src="https://cdn.rawgit.com/john-guerra/ecdde32ab4ad91a1a240/raw/2c1a843df8631604a99140ddc9db8ee048624a79/index.html" class="blocks"></iframe><a href="https://github.com/john-guerra/netClusteringJs" class="tiny">https://github.com/john-guerra/netClusteringJs</a>
+          </section>
+          <section>
+            <h2 class="demo">Force-in-a-box</h2>
+            <iframe src="https://cdn.rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/4ab64e42bd88f3b6ec3b742d1fefb67cb61140a9/index.html" class="blocks"></iframe>
+            <p class="small"><strong>Best practice #4 Cluster and separate groups</strong></p><a href="https://github.com/john-guerra/forceInABox" class="tiny">https://github.com/john-guerra/forceInABox</a>
+          </section>
+          <section><img src="images/overview_10k_full_cropped.png" class="bigdemo"></section>
+          <section><img src="images/overview_10k_nointer_cropped.png" class="bigdemo"></section>
+          <section>
+            <h2 class="demo">Jump into clusters</h2><img src="images/jumpIntoCluster_1.png" class="demo">
+          </section>
+          <section>
+            <h2 class="demo">Jump into clusters</h2><img src="images/jumpIntoCluster_2.png" class="demo">
+          </section>
+          <section>
+            <h2 class="demo">Jump into clusters</h2><img src="images/jumpIntoCluster_3.png" class="demo">
+          </section>
+          <section>
+            <h2 class="demo">Jump into clusters</h2><img src="images/jumpIntoCluster_4.png" class="demo">
+            <p class="small"><strong>Best practice #5 Allow users to filter by cluster</strong></p>
+          </section>
+          <section>
+            <h2 class="demo">Node navigator</h2><img src="images/nodeNavigator.png" class="demo">
+            <p class="small"><strong>Best practice #6 Inform users of what they are seeing</strong></p>
+          </section>
+          <section>
+            <h2 class="demo">Overview</h2><img src="images/overview_10k_nointer_cropped.png" class="demo">
+          </section>
+          <section>
+            <h1>Ego-network view</h1>
+          </section>
+          <section>
+            <h2 class="demo">Ego-distance mode</h2><img src="images/ego_distance_view_annotated_filtered.png" class="demo">
+            <p class="small"><strong>Best practice #7 Allow node expansion on demand</strong></p>
+          </section>
+          <section>
+            <h2 class="demo">Node pining</h2><img src="images/network_explorer_ego_distance.png" class="demo">
+            <p class="small"><strong>Best practice #8 Allow custom layouts</strong></p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Validation</h2>
+          </section>
+          <section>
+            <h2 class="demo">Fraud, waste and abuse</h2><img src="images/fraud_waste_and_abuse.png" class="demo">
+          </section>
+          <section>
+            <h2 class="demo">Police chat networks</h2><img src="images/fiveO_chat_anon.png" class="demo">
+          </section>
+          <section>
+            <h2 class="demo">Drug latent communities</h2><img src="images/clusters_latent_communities2.png" class="demo">
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Contributions</h2>
+            <ul>
+              <li class="fragment">Best practices</li>
+              <li class="fragment">Node Navigator</li>
+              <li class="fragment">Open Sourced force-in-a-box layout</li>
+              <li class="fragment">Open Sourced in-browser clustering</li>
+              <li class="fragment">Rank-by-relevance framework</li>
+            </ul>
+          </section>
+        </section>
+        <section id="problem">
+          <section>
+            <h1>The problem</h1>
+          </section>
+          <section>
+            <h2>How to display groups of photos?</h2>
+          </section>
+          <section data-background="images/Flickr_Explore.png">
+            
+          </section>
+          <section>
+            <h3>What if the photos have also statistics?</h3>
+          </section>
+          <section data-background="images/Flickr_photo_stats.png"></section>
+          <section><img src="images/Flickr_photo_stats_list.png"></section>
+          <section data-background="images/widgetExample.png"></section>
+          <section id="researchQuestion">
+            <h3><strong>What are the best practices for representing photos with associated statistics with treemaps?</strong></h3>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Experiment 1:</h1>
+            <h2>Photo count</h2>
+          </section>
+          <section id="ex1Demo">
+            <h2 class="demo">Ex1. Demo</h2><img src="images/screenshot_experiment1.png" class="demo">
+          </section>
+          <section>
+            <h2>We measured</h2>
+            <ol>
+              <li class="fragment">Time to find photo</li>
+              <li class="fragment">User preference</li>
+            </ol>
+          </section>
+          <section>
+            <h2 class="demo">Ex1. Demographics</h2><img src="images/experiment1_demographics.png" class="demo">
+            <p class="small">154 Mechanical Turk Responses (67 women)</p>
+          </section>
+          <section>
+            <h2>Ex1. Results</h2>
+          </section>
+          <section>
+            <h3 class="demo">Avg time to find depending on photo position</h3><img src="images/experiment1_resultsv2.png" class="demo">
+          </section>
+          <section>
+            <h3 class="demo">Photo count sweet spot</h3><img src="images/experiment1_sweet_spot.png" class="demo">
+            <p class="small">For a 390x440px phototreemap</p>
+          </section>
+        </section>
+        <section id="Experiment2">
+          <section>
+            <h1>Experiment 2:</h1>
+            <h2>Layout</h2>
+          </section>
+          <section>
+            <h2 class="demo">Demo</h2><img src="images/experiment2_treemap1.png" class="demo">
+          </section>
+          <section>
+            <h2>We measured</h2>
+            <ol>
+              <li class="fragment">Time to find photos</li>
+              <li class="fragment">Number of errors</li>
+              <li class="fragment">Accuracy</li>
+              <li class="fragment">User preference</li>
+            </ol>
+          </section>
+          <section>
+            <h2 class="demo">Ex2. Demographics</h2><img src="images/experiment2_demographics.png" class="demo">
+            <p class="small">63 responses (27 women)</p>
+          </section>
+          <section>
+            <h3 class="demo">Time to find photo (ms)</h3><img src="images/experiment2_results.png" class="demo">
+          </section>
+          <section>
+            <h2>Errors</h2>
+            <table>
+              <tr>
+                <td>Proportional</td>
+                <td>47</td>
+              </tr>
+              <tr>
+                <td>Scrollable</td>
+                <td>21</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h2>Accuracy</h2>
+            <table>
+              <tr>
+                <td>Proportional</td>
+                <td>86.44%</td>
+              </tr>
+              <tr>
+                <td>Scrollable</td>
+                <td>77.97%</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h2>User preference</h2>
+            <p>81.3% of the participants preferred the scrollable layout</p>
+          </section>
+        </section>
+        <section id="Experiment3">
+          <section>
+            <h1>Experiment 3:</h1>
+            <h2>User Study</h2>
+          </section>
+          <section>
+            <h2>Design</h2>
+            <ul>
+              <li class="fragment">7 participants</li>
+              <li class="fragment">Users viewed their own photos</li>
+              <li class="fragment">5 point likert scale on usefulness and pleasingness for 3x2 configurations</li>
+              <ul>
+                <li class="fragment">Labels vs no Labels</li>
+                <li class="fragment">Size and sorting by views, comments or favorites</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3 class="demo">Configuration preference</h3><img src="images/experiment3_results.png" class="demo">
+          </section>
+        </section>
+        <section id="Conclusions">
+          <section>
+            <h2>Conclusions</h2>
+            <ul>
+              <li class="fragment">Small number of photos is better <span class="fragment">but not too small</span></li>
+              <li class="fragment">Cropping and aspect ration has a big impact</li>
+              <li class="fragment">Scrolling can be preferable to cropping</li>
+              <li class="fragment">Labels are important</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Future/Current Work</h2>
+            <ul>
+              <li class="fragment">Explore cropping compensation techniques</li>
+              <li class="fragment">Usage of treemap deeper levels for categorization</li>
+              <li class="fragment">Zoomable techniques</li>
+            </ul>
+          </section>
+        </section>
+        <section id="thankyou" data-background="#000" data-background-video-muted data-background-video="images/NetworkExplorer_AVI_Demo_900.mp4,images/NetworkExplorer_AVI_Demo_900.webm">
+          <h1>Thank You</h1>
+          <h2>Questions?</h2>
+          <test></test>
+          <div class="contactInfo">
+            <p>John Alexis Guerra Gómez</p><a href="http://johnguerra.co">johnguerra.co</a><br><a href="http://twitter.com/duto_guerra">@duto_guerra</a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: 'plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: 'plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: 'plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-50178794-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
