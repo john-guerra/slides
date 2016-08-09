@@ -1,6 +1,3 @@
-@import 'lib/css/reveal.css';
-@import 'lib/css/theme/simple.css';
-@import 'lib/css/zenburn.css';
 .reveal p,
 .reveal ol,
 .reveal ul,
@@ -157,6 +154,10 @@
 }
 .reveal .contactInfo a {
   font-size: 0.6em;
+}
+.reveal .logo img {
+  height: 80px;
+  margin: 20px;
 }
 .reveal #thankyou h1,
 .reveal #thankyou h2,

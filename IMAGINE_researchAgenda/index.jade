@@ -5,10 +5,17 @@ html
     meta(charset='utf-8')
     meta(name='author', content='John Alexis Guerra Gomez')
     meta(name='description', content='Quest for insights: visualizing trees, graphs and photos')
-    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
-    //- link(href='lib/css/reveal.css', rel='stylesheet')
-    //- link(href='lib/css/theme/simple.css', rel='stylesheet')
-    //- link(href='lib/css/zenburn.css', rel='stylesheet')
+    //- meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    link(rel="stylesheet" href="css/reveal.css")
+    link(rel="stylesheet" href="css/theme/simple.css" id="theme")
+
+    //- !--(Theme used for syntax highlighting of code --)
+    link(rel="stylesheet" href="lib/css/zenburn.css")
     link(href='style.css', rel='stylesheet')
     //- Printing and PDF exports -->
     script.
@@ -26,10 +33,9 @@ html
           h3: strong Quest for insights: visualizing trees, graphs and photos
           br
 
-          p.authors.
-            #[a(href='http://johnguerra.co/', target='_blank') John A. Guerra Gómez], Aaron Wilson, Juan Liu, Dan Davies, Peter Jarvis and Eric Bier
-            #[br]
-            #[span] Palo Alto Research Center
+          p #[a(href='http://johnguerra.co/', target='_blank') John Alexis Guerra Gómez]
+          p.small
+            a(href='http://twitter.com/duto_guerra') @duto_guerra
 
           //- p.small Use
           //-   strong  spacebar
@@ -37,13 +43,165 @@ html
           br
           p.small
             a(href='http://johnguerra.co/slides/IMAGINE_researchAgenda', target='_blank') http://johnguerra.co/slides/IMAGINE_researchAgenda
-          p.small
-            a(href='http://twitter.com/duto_guerra') @duto_guerra
+
+
+          a.logo(href="http://uniandes.edu.co/")
+            img(src="images/universidad_de_los_andes_logo.png")
+          a.logo(href="https://imagine.uniandes.edu.co")
+            img(src="images/LogoImagine_FondoBlanco.png")
 
 
         section
           section
-            h2 Large networks visualization
+            h1 Visual Analytics Researcher
+
+          section
+            h2 Research Interests
+            ul
+              li.fragment Visual Analytics
+              ul
+                li.fragment Trees
+                li.fragment Graphs
+                li.fragment #[strong Photos]
+              li.fragment Accesibility
+              li.fragment Big Data
+
+          section
+            h2 How do I do it?
+            img.demo(src="images/My skills.png")
+
+          section#BuscandoInsights
+            h2 What do I use?
+            img.demo(src="images/What I use.png")
+
+
+
+        //- ################### TREES
+        section
+          section
+            h1 Trees
+            p.small Work with Michael L. Pack, Audra Buck-Coleman, Catherine Plaisant, Ben Shneiderman.
+            a.logo(href="http://hcil.cs.umd.edu")
+              img(src="images/HCIL_logo_small_no border.gif")
+            a.logo(href="http://cattlab.umd.edu")
+              img(src="images/CATTLabLogoTransparent.png")
+
+            p.tiny
+              a(href="http://www.sciencedirect.com/science/article/pii/S0968090X14003301")  [TRC2015]
+              a(href="http://johnguerra.co/papers/TreeVersity_InfoViz2013_preprint.pdf")  [Vis2013]
+              a(href="http://drum.lib.umd.edu/handle/1903/14484") [Thesis2013]
+              a(href="http://hcil2.cs.umd.edu/trs/2012-14/2012-14.pdf")  [TRB2013]
+              a(href="http://www.designresearchsociety.org/docs-procs/drs2012/drs2012-2.pdf")  [DRS2013]
+              A(hef="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6102471&tag=1")  [Vis2011]
+              a(href="https://www.cs.umd.edu/users/ben/papers/Wongsuphasawat2011LifeFlow.pdf")  [CHI2011]
+              a(href="http://hcil2.cs.umd.edu/trs/2010-17/2010-17.pdf")  [TRB2011]
+
+
+
+          //- pdf to png with:
+          //- convert -density 150 -depth 8 -quality 85 TreeVersityPresentation_infoVis2013_split.pdf images/TreeVersityPresentation_infoVis2013.png
+
+          //- section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-0.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-1.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-2.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-3.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-4.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-5.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-6.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-7.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-8.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-9.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-10.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-11.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-12.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-13.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-14.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-15.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-16.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-17.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-18.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-19.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-20.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-21.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-22.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-23.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-24.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-25.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-26.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-27.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-28.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-29.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-30.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-31.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-32.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-33.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-34.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-35.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-36.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-37.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-38.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-39.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-40.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-41.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-42.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-43.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-44.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-45.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-46.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-47.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-48.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-49.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-50.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-51.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-52.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-53.png")
+
+          section
+            h1 TreeVersity2 Demo
+
+          section
+            iframe.blocks(src="https://treeversity.cattlab.umd.edu")
+            a.tiny(target="_blank" href="https://treeversity.cattlab.umd.edu") https://treeversity.cattlab.umd.edu
+
+
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-56.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-57.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-58.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-59.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-60.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-61.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-62.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-63.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-64.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-65.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-66.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-67.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-68.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-69.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-70.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-71.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-72.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-73.png")
+          section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-74.png")
+          //- section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-75.png")
+          //- section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-76.png")
+          //- section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-77.png")
+          //- section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-78.png")
+          //- section(data-background-size="contain" data-background="images/TreeVersityPresentation_infoVis2013-79.png")
+
+
+
+
+        //- ###############  Network explorer
+        section
+          section
+            h1 Networks
+            p.small Work with Aaron Wilson, Juan Liu, Dan Davies, Peter Jarvis and Eric Bier
+            a.logo(href="http://parc.com")
+              img(src="images/whoami/parc_rgb.png" height="80px")
+            p.tiny
+              a(href="http://johnguerra.co/papers/network_explorer_avi_short.pdf")  [AVI2016]
+              a(href="http://www.aaai.org/ocs/index.php/IAAI/IAAI15/paper/view/9705")  [IAAI2015]
 
           section
             h2 Plenty of work has been done on the field
@@ -73,7 +231,7 @@ html
               li.fragment Scalability
               li.fragment Industry
 
-        section
+          //- section
           section
             h1 Best practices
 
@@ -172,7 +330,7 @@ html
               strong Best practice #8 Allow custom layouts
 
 
-        section
+          //- section
           section
             h2 Validation
 
@@ -188,7 +346,7 @@ html
             h2.demo Drug latent communities
             img.demo(src="images/clusters_latent_communities2.png")
 
-        section
+          //- section
           section
             h2 Contributions
             ul
@@ -199,9 +357,27 @@ html
               li.fragment Rank-by-relevance framework
 
 
+
+
         //- ############### PHOTO TREEMAP #######################
 
         section#problem
+          section
+            h1 Photos
+            p.small Work with Cati Boulanger, Sanjay Kairam, Frank Bentley, Joseph ‘Jofish’ Kaye, David A. Shamma
+
+
+            a.logo(href="https://research.yahoo.com/")
+              img(src="images/whoami/labs_us_purple_1000px_wide.png" )
+
+            a.logo(href="https://www.stanford.edu/")
+              img(src="images/StanfordLogo.png")
+
+            p.tiny
+              a(href="http://johnguerra.co/papers/avi-treemaps_camera_ready.pdf")  [AVI2016_2]
+              a(href="http://johnguerra.co/papers/Bentley_CHI2016.pdf")  [CHI2016]
+              a(href="http://johnguerra.co/papers/Kairam-CHI2016.pdf")  [CHI2016_2]
+
           section
             h1 The problem
 
@@ -236,7 +412,7 @@ html
             h3: strong What are the best practices for representing photos with associated statistics with treemaps?
 
 
-        section
+          //- section
           section
             h1 Experiment 1:
             h2 Photo count
@@ -269,7 +445,7 @@ html
             p.small For a 390x440px phototreemap
 
 
-        section#Experiment2
+          //- section#Experiment2
           section
             h1 Experiment 2:
             h2 Layout
@@ -320,7 +496,7 @@ html
             h2 User preference
             p 81.3% of the participants preferred the scrollable layout
 
-        section#Experiment3
+          //- section#Experiment3
           section
             h1 Experiment 3:
             h2 User Study
@@ -340,7 +516,7 @@ html
             img.demo(src="images/experiment3_results.png")
 
 
-        section#Conclusions
+          //- section#Conclusions
           section
             h2 Conclusions
             ul
@@ -357,6 +533,60 @@ html
               li.fragment Zoomable techniques
 
 
+        section
+          section
+            h1 Future/Current work
+
+          section
+            h2 Zoomable Photo Treemap
+            p Photo widget to show many photos at once with numeric values and categorical groupings
+
+          section
+            iframe.blocks(src="http://infovis.co/phototreemap/magicview_treemap/")
+            a.tiny(href="http://infovis.co/phototreemap/magicview_treemap/" target="_blank") http://infovis.co/phototreemap/magicview_treemap/
+
+          section
+            h2 PhotoRing
+            p How to better allow exploration and navigation of millions on photos
+
+          section
+            img(src="images/whoami/photoRing.png")
+
+          section
+            h2 Other photo experiments
+
+          //- section
+          //-   iframe.blocks(src="http://infovis.co/albumsCollage/")
+          //-   a.tiny(href="http://infovis.co/albumsCollage/") http://infovis.co/albumsCollage/
+
+          section
+            iframe.blocks(src="http://infovis.co/phototreemap/ranking/")
+            a.tiny(href="http://infovis.co/phototreemap/ranking/") http://infovis.co/phototreemap/ranking/
+          section
+            iframe.blocks(src="http://Wholikesmyfb.com")
+            a.tiny(href="http://Wholikesmyfb.com") http://Wholikesmyfb.com
+
+
+          section
+            h2 BTactile
+            p How to better enable people to support blind students in learning graphics
+
+          section
+            iframe.blocks(src="http://btactile.com")
+            a.tiny(href="http://btactile.com") http://btactile.com
+
+          section
+            h2 Other topics
+            ul
+              li.fragment Time-based Visualization
+              li.fragment Network Visualization
+              li.fragment Social Networks
+              li.fragment Real time/incremental visualization
+              li.fragment Big Data visualization
+
+
+
+
 
         section#thankyou(data-background="#000" data-background-video-muted data-background-video="images/NetworkExplorer_AVI_Demo_900.mp4,images/NetworkExplorer_AVI_Demo_900.webm")
           h1 Thank You
@@ -370,6 +600,113 @@ html
             a(href="http://johnguerra.co") johnguerra.co
             br
             a(href="http://twitter.com/duto_guerra") @duto_guerra
+
+        //- Extras Who am I
+        section
+          section(data-background="images/whoami/Pereira.jpg")
+            //- h2 Ingeniero de sistemas y computación UTP
+            //- img(src="images/whoami/Pereira.jpg")
+
+          section#IRIS
+            img(src="images/whoami/IRIS_y_su_caja_peq.png")
+
+          section#KebSolutions
+            img(src="images/whoami/logo_keb.png")
+
+          section#Fulbright
+            img(src="images/whoami/fulbright.png")
+
+          section#Doctorado
+            h1 PhD
+
+          section#HCIL
+            img(src="images/whoami/Ben_and_Catherine.jpg")
+
+          section
+            iframe.blocks(src="https://cdn.rawgit.com/mbostock/4063582/raw/dd152a94f98ab7081a41096a88ece375e64a8b6c/index.html")
+
+          section
+            img(src="images/whoami/lifelines.jpg")
+
+          section
+            img(src="images/whoami/lifeflow.png")
+
+          section
+            img(src="images/whoami/2012_08_20_paxs_overview_september_01.png")
+
+          section
+            a(href="https://treeversity.cattlab.umd.edu/?hierarchy=agency/bureau&db=tv2_budget&seqFrom=01/01/70&seqTo=01/01/15&currentFrom=40&title=US%20Federal%20Budget")
+              img(src="images/whoami/treeversity_v2.png")
+
+          //- section
+            //- img(src="images/whoami/2013_03_29_Budget_2013_Reporting2.png")
+
+          section
+            img(src="images/whoami/2013_04_29_eBay.png")
+
+          section
+            img(src="images/whoami/13CaseStudies.png")
+
+          section
+            h2 Silicon Valley
+            //- img(src="images/whoami/mapaCalifornia.png")
+
+          section
+            img(src="images/whoami/parc_rgb.png")
+
+          section
+            img.demo(src="images/whoami/topics_steamchart_with_wordclouds.png")
+
+
+
+          section
+            img(src="images/whoami/labs_us_purple_1000px_wide.png")
+
+          //- section
+          //-   img(src="images/whoami/Flickr.png")
+
+          section
+            img(src="images/whoami/christmass.png")
+
+          section
+            img(src="images/whoami/FlickrPopular.png")
+
+          section
+            img(src="images/whoami/topPhotos.png")
+
+          section
+            img(src="images/whoami/photoRing.png")
+
+
+          //- section
+          //-   img(src="images/whoami/GeoExplorer.png")
+
+          //- section
+          //-   h2 Many other projects
+
+          //- section
+          //-   img(src="images/whoami/TradeFlow.png")
+
+          //- section
+          //-   img(src="images/whoami/Tweetometro.png")
+
+          //- section
+          //-   img(src="images/whoami/Wholikesmyfb.png")
+
+          //- section
+          //-   iframe.blocks(src="https://cdn.rawgit.com/john-guerra/4db5024e00a82f10a2dc/raw/1c7d368565d6c59dc9608dc5e792786616c26aff/index.html")
+          //-   //- img(src="images/whoami/ForceColombia.png")
+
+          //- section
+          //-   img(src="images/whoami/MapaColombia.png")
+
+          //- section
+          //-   img(src="images/whoami/VIT.png")
+
+          //- section
+          //-   img(src="images/whoami/QueCarroComprar.png")
+
+
 
 
 
